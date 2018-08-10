@@ -68,7 +68,7 @@ if ($baseDatos != null && $baseAlumnos != null && $baseVehiculo != null && $mes 
   $objPHPExcel->setActiveSheetIndex(0);
   $filas = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
   $columnas = $objPHPExcel->setActiveSheetIndex(0)->getHighestColumn();
-  if ($columnas == "V") {
+  if ($columnas == "U") {
     /* Recorrer archivos*/
 
     /* Fichero bd */

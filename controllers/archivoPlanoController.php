@@ -195,8 +195,13 @@ if ($baseDatos != null && $baseAlumnos != null && $baseVehiculo != null && $mes 
             $clave = array_search($dato['codigo_alumno'], array_column($arrayBd, 'codigo'));
             $claveVehiculo = array_search($dato['ruta_alumno'], array_column($arrayVehiculos, 'ruta_vehiculo'));
 
-            $cedulaFather = $arrayBd[$clave]['celular_padre'];
+
+            $cedulaFather = $arrayBd[$clave]['cedula_padre'];
+
             $cedulaAcudiente = $cedulaFather;
+            if ($cedulaAcudiente == 0) {
+              $cedulaAcudiente = null;
+            }
 
             if ($cedulaFather == null || $cedulaFather == "sin datos") {
               $cedulaMother = $arrayBd[$clave]['cedula_madre'];

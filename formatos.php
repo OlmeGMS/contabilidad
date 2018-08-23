@@ -155,7 +155,6 @@
                                 <li>
                                     <a href="formatos.php"><i class="gi gi-book sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Formatos</span></a>
                                 </li>
-
                             </ul>
                             <!-- END Sidebar Navigation -->
 
@@ -248,7 +247,7 @@
                         <div class="content-header">
                             <div class="header-section">
                                 <h1>
-                                    <i class="gi gi-file"></i>Archivos<br><small>Sube los archivos planos para generar la plantilla!</small>
+                                    <i class="gi gi-file"></i>Archivos<br><small>Descarga los formatos, recuerda borrar los encabezados antes de subir los archivos!</small>
                                 </h1>
                             </div>
                         </div>
@@ -271,51 +270,46 @@
                               <div class="col-md-12">
 
                                       <!-- Basic Form Elements Content -->
-                                      <form action="controllers/archivoPlanoController.php" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_datos">Base de datos</label>
-                                              <div class="col-md-9">
-                                                  <input type="file" id="base_datos" name="base_datos">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_alumnos">Archivo alumno</label>
-                                              <div class="col-md-9">
-                                                  <input type="file" id="base_alumnos" name="base_alumnos">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_vehiculos">Archivos vehículo</label>
-                                              <div class="col-md-9">
-                                                  <input type="file" id="base_vehiculos" name="base_vehiculos">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="mes">Mes</label>
-                                              <div class="col-md-9">
-                                                  <select id="mes" name="mes" class="form-control" size="1">
-                                                      <option value="0" disabled>Selecciona el mes</option>
-                                                      <option value="ENERO">ENERO</option>
-                                                      <option value="FEBRERO">FEBRERO</option>
-                                                      <option value="MARZO">MARZO</option>
-                                                      <option value="ABRIL">ABRIL</option>
-                                                      <option value="MAYO">MAYO</option>
-                                                      <option value="JUNIO">JUNIO</option>
-                                                      <option value="JULIO">JULIO</option>
-                                                      <option value="AGOSTO">AGOSTO</option>
-                                                      <option value="SEPTIEMBRE">SEPTIEMBRE</option>
-                                                      <option value="OCTUBRE">OCTUBRE</option>
-                                                      <option value="NOVIEMBRE">NOVIEMBRE</option>
-                                                      <option value="DICIEMBRE">DICIEMBRE</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          <div class="form-group form-actions">
-                                              <div class="col-md-9 col-md-offset-3">
-                                                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Enviar</button>
-                                              </div>
-                                          </div>
-                                      </form>
+                                      <div class="table-responsive remove-margin-bottom">
+                                        <table id="table-lineas" class="table table-bordered table-striped table-vcenter">
+                                          <thead>
+                                              <tr>
+                                                  <th class="text-center" style="width: 80px;">ID</th>
+                                                  <th class="text-center">Nombre</th>
+                                                  <th class="text-center">Descargar</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                <td id="" name ="" class="text-center">1</td>
+                                                <td id="" name ="" class="text-center">Base de datos</td>
+                                                <td class="text-center">
+                                                  <div class="btn-group btn-group-xs">
+                                                    <a href="controllers/formatos/baseDatosController.php" data-toggle="tooltip" title="Descargar" class="btn btn-xs btn-info" id=""><i class="fa fa-arrow-down"></i></a>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td id="" name ="" class="text-center">2</td>
+                                                <td id="" name ="" class="text-center">Alumnos</td>
+                                                <td class="text-center">
+                                                  <div class="btn-group btn-group-xs">
+                                                    <a href="controllers/formatos/alumnosController.php" data-toggle="tooltip" title="Descargar" class="btn btn-xs btn-info" id=""><i class="fa fa-arrow-down"></i></a>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td id="" name ="" class="text-center">3</td>
+                                                <td id="" name ="" class="text-center">Vehículos</td>
+                                                <td class="text-center">
+                                                  <div class="btn-group btn-group-xs">
+                                                    <a href="controllers/formatos/vehiculosController.php" data-toggle="tooltip" title="Descargar" class="btn btn-xs btn-info" id=""><i class="fa fa-arrow-down"></i></a>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                          </tbody>
+                                          </table>
+                                      </div>
                                       <!-- END Basic Form Elements Content -->
                               </div>
                             </div>

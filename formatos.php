@@ -253,7 +253,7 @@
                         </div>
                         <ul class="breadcrumb breadcrumb-top">
                             <li>Contabilidad</li>
-                            <li>subir archivos</li>
+                            <li>bajar archivos</li>
                         </ul>
                         <!-- END Blank Header -->
 

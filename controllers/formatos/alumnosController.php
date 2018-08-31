@@ -1,5 +1,4 @@
 <?php
-<?php
 require_once('../../vendor/PHPExcel/Classes/PHPExcel.php');
 require_once('../../vendor/PHPExcel/Classes/PHPExcel/IOFactory.php');
 ini_set('date.timezone', 'America/Bogota');

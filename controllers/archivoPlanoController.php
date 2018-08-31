@@ -196,9 +196,10 @@ if ($baseDatos != null && $baseAlumnos != null && $baseVehiculo != null && $mes 
             $claveVehiculo = array_search($dato['ruta_alumno'], array_column($arrayVehiculos, 'ruta_vehiculo'));
 
 
-            $cedulaFather = $arrayBd[$clave]['cedula_padre'];
+            $cedulaFather = $arrayBd[$clave]['cc_acuerdo_fin'];
 
             $cedulaAcudiente = $cedulaFather;
+            /*
             if ($cedulaAcudiente == 0) {
               $cedulaAcudiente = null;
             }
@@ -207,7 +208,7 @@ if ($baseDatos != null && $baseAlumnos != null && $baseVehiculo != null && $mes 
               $cedulaMother = $arrayBd[$clave]['cedula_madre'];
               $cedulaAcudiente = $cedulaMother;
             }
-
+            */
             $pagoConductor = $arrayVehiculos[$claveVehiculo]['nombre_vehiculo'];
             $concepto = 'CODIGO '.$dato['codigo_alumno'].' RUTA '.$dato['ruta_alumno'].' '.$mes;
             //echo $cedulaAcudiente;

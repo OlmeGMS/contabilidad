@@ -251,7 +251,7 @@
                         <div class="content-header">
                             <div class="header-section">
                                 <h1>
-                                    <i class="gi gi-file"></i>Archivos<br><small>Sube los archivos planos para generar la plantilla!</small>
+                                    <i class="fa fa-bank"></i>Archivos Colpatria<br><small>Sube el archivo planos para generar la plantilla de colpatria!</small>
                                 </h1>
                             </div>
                         </div>
@@ -274,45 +274,14 @@
                               <div class="col-md-12">
 
                                       <!-- Basic Form Elements Content -->
-                                      <form action="controllers/archivoPlanoController.php" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                                      <form action="controllers/archivoPlanoColpatriaController.php" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
                                           <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_datos">Base de datos</label>
+                                              <label class="col-md-3 control-label" for="colpatria">Colpatria</label>
                                               <div class="col-md-9">
-                                                  <input type="file" id="base_datos" name="base_datos">
+                                                  <input type="file" id="colpatria" name="colpatria">
                                               </div>
                                           </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_alumnos">Archivo alumno</label>
-                                              <div class="col-md-9">
-                                                  <input type="file" id="base_alumnos" name="base_alumnos">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="base_vehiculos">Archivos vehículo</label>
-                                              <div class="col-md-9">
-                                                  <input type="file" id="base_vehiculos" name="base_vehiculos">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <label class="col-md-3 control-label" for="mes">Mes</label>
-                                              <div class="col-md-9">
-                                                  <select id="mes" name="mes" class="form-control" size="1">
-                                                      <option value="0" disabled>Selecciona el mes</option>
-                                                      <option value="ENERO">ENERO</option>
-                                                      <option value="FEBRERO">FEBRERO</option>
-                                                      <option value="MARZO">MARZO</option>
-                                                      <option value="ABRIL">ABRIL</option>
-                                                      <option value="MAYO">MAYO</option>
-                                                      <option value="JUNIO">JUNIO</option>
-                                                      <option value="JULIO">JULIO</option>
-                                                      <option value="AGOSTO">AGOSTO</option>
-                                                      <option value="SEPTIEMBRE">SEPTIEMBRE</option>
-                                                      <option value="OCTUBRE">OCTUBRE</option>
-                                                      <option value="NOVIEMBRE">NOVIEMBRE</option>
-                                                      <option value="DICIEMBRE">DICIEMBRE</option>
-                                                  </select>
-                                              </div>
-                                          </div>
+
                                           <div class="form-group form-actions">
                                               <div class="col-md-9 col-md-offset-3">
                                                   <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Enviar</button>

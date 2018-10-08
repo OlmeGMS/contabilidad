@@ -71,15 +71,15 @@ if ($colpatria != null) {
 
     /* Crear archivo de salida */
     header('Content-Type: text/plain');
-    header('Content-Disposition: attachment; filename=plantilla_colpatria.txt');
+    header('Content-Disposition: attachment; filename=plantilla_colpatria.csv');
 
-    $archivo_csv = fopen("../documents/colpatria.txt", 'w');
+    $archivo_csv = fopen("../documents/colpatria.csv", 'w');
 
     for ($i=0; $i < $cantArray; $i++) {
       $data = implode($arrayColpatria[$i]);
       //var_dump($data);
       echo "$data\n";
-      //$cvs.= "$data\n";
+      $cvs.= "$data\n";
 
     }
 
@@ -87,7 +87,7 @@ if ($colpatria != null) {
     fclose($archivo_csv);
 
     /* Borrar el fichero */
-    unlink('../documents/colpatria.txt');
+    unlink('../documents/colpatria.csv');
 
     //echo "termino ...";
 

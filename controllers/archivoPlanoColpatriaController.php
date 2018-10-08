@@ -69,25 +69,26 @@ if ($colpatria != null) {
 
     $cantArray = count($arrayColpatria);
 
-    /* Crear archivo de salida */
-    header('Content-Type: text/plain');
-    header('Content-Disposition: attachment; filename=plantilla_colpatria.csv');
-
-    $archivo_csv = fopen("../documents/colpatria.csv", 'w');
-
     for ($i=0; $i < $cantArray; $i++) {
-      $data = implode($arrayColpatria[$i]);
-      //var_dump($data);
-      echo "$data\n";
-      $cvs.= "$data\n";
+        $data = implode($arrayColpatria[$i]);
+        //var_dump($data);
+        //echo "$data\n";
+        $cvs.= "$data\n";
 
-    }
+      }
 
-    fputs($archivo_csv, ($cvs.PHP_EOL));
-    fclose($archivo_csv);
+    $filecontent="$cvs";
+    $downloadfile="colpatria.txt";
 
-    /* Borrar el fichero */
-    unlink('../documents/colpatria.csv');
+    header("Content-disposition: attachment; filename=$downloadfile");
+    header("Content-Type: application/force-download");
+    header("Content-Transfer-Encoding: binary");
+    header("Content-Length: ".strlen($filecontent));
+    header("Pragma: no-cache");
+    header("Expires: 0");
+
+    echo $filecontent;
+
 
     //echo "termino ...";
 

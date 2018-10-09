@@ -72,8 +72,11 @@ if ($colpatria != null) {
     for ($i=0; $i < $cantArray; $i++) {
         $data = implode($arrayColpatria[$i]);
         //var_dump($data);
-        //echo "$data\n";
-        $cvs.= "$data\n";
+        //echo "$data";
+        //echo "<br>";
+        $cvs.= "$data";
+        $cvs.= "\r";
+
 
       }
 

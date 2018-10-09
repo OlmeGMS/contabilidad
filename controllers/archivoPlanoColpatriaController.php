@@ -75,7 +75,7 @@ if ($colpatria != null) {
         //echo "$data";
         //echo "<br>";
         $cvs.= "$data";
-        $cvs.= "\n\r";
+        $cvs.= "\n";
 
 
       }
